@@ -7,8 +7,38 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  
- <p>so, the leguend is true, the one who kills the ashbringer becomes the one</p>
+
+  <div class="fixed header">
+         <ul class="nav nav-tabs">  
+           <!--<li> <picture class="sitename" href="#" height="28"><%= image_tag "strix.png" %> </a></li>-->
+           <span class="divisor hide-xs"></span>
+           <li> <%= link_to "Home" , welcome_index_path %></li>
+           <span class="divisor hide-xs"></span>
+           <li> <%= link_to "9gag!", "https://9gag.com", :target => "_blank" %> </li>
+        </ul>
+   </div>   
+
+
+ <p>So, the leguend is true, the one who kills the ashbringer becomes the one</p>
+ 
+ 
+         <% if flash[:notice] %>
+          <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:notice] %>
+          </div>
+        <% elsif flash[:error] %>
+          <div class="alert alert-error">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:error] %>
+          </div>
+        <% elsif flash[:alert] %>
+          <div class="alert">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <%= flash[:alert] %>
+          </div>
+        <% end %>
+ 
  
 <%= yield %>
 
