@@ -27,28 +27,40 @@
   
 </head>
 <body>
+  <div class="notification_zone ">
+	<div class="container">
+      <% if flash[:notice] %>
+        <div class="alert alert-success">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:notice] %>
+        </div>
+      <% elsif flash[:error] %>
+        <div class="alert alert-error">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:error] %>
+        </div>
+      <% elsif flash[:alert] %>
+        <div class="alert">
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <%= flash[:alert] %>
+        </div>
+      <% end %>
+    </div>
+  </div>
   
-   <p>So, the leguend is true, the one who kills the ashbringer becomes the one</p>
+  <div id="page-wrap" data-pjax-container=" ">
+	<div class="over_content">
+	    
+	  <p><b>So, the leguend is true, the one who kills the ashbringer becomes the one</b></p>
+
+        <!--here, on the yield statement is where most of the aplication info will display-->
+        
+        <%= yield %>
+
+      
+    </div>
+  </div>
+   
  
-
-   <% if flash[:notice] %>
-    <div class="alert alert-success">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:notice] %>
-    </div>
-  <% elsif flash[:error] %>
-    <div class="alert alert-error">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:error] %>
-    </div>
-  <% elsif flash[:alert] %>
-    <div class="alert">
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-      <%= flash[:alert] %>
-    </div>
-  <% end %>
-
-<%= yield %>
-
 </body>
 </html>
