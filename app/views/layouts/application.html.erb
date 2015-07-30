@@ -6,7 +6,9 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   
-  <div class="navbar navbar-fixed-top">
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
       <div class="container">
             <ul class="nav nav-tabs  nav-justified">  
               <li>
@@ -24,9 +26,6 @@
           </ul>
     </div>
   </div>
-  
-</head>
-<body>
   <div class="notification_zone ">
 	<div class="container">
       <% if flash[:notice] %>
