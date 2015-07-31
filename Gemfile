@@ -55,5 +55,8 @@ gem 'autoprefixer-rails'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+#to add user logins and accounts
+gem 'devise'
+
 end
 
