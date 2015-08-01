@@ -33,7 +33,7 @@ gem 'turbolinks'
 # gem 'capistrano-rails', group: :development
 
 #i will use it to make the restfull api someday
-  gem 'rails-api'
+#  gem 'rails-api'
 
 #help with the api documentation
   gem 'apipie-rails'

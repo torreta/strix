@@ -24,8 +24,7 @@
              <li> <%= link_to "9gag!", "https://9gag.com", :target => "_blank" %> </li>
              <li> <%= link_to "youtube!", "https://youtube.com", :target => "_blank" %> </li>
               <% if user_signed_in? %>
-                Logged in as <strong><%= current_user.email %></strong>.
-                <li> <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+                <li> <%= link_to 'Profile', edit_user_registration_path, :class => 'navbar-link' %></li>
                 <li><%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
               <% else %>
                  <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %></li>
@@ -35,15 +34,11 @@
           </ul>
     </div>
   </div>
+  <% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>.
+  <% end %>
   <div class="notification_zone ">
 	<div class="container">
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-        <p class="alert alert-danger"><%= alert %></p>
-      <% end %>
-      
       <% if flash[:notice] %>
         <div class="alert alert-success">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -62,12 +57,9 @@
       <% end %>
     </div>
   </div>
-  
   <div id="page-wrap" data-pjax-container=" ">
 	<div class="over_content">
-	  <% if user_signed_in? %>
-      Logged in as <strong><%= current_user.email %></strong>.
-    <% end %>
+
 	  <p><b>So, the leguend is true, the one who kills the ashbringer becomes the one</b></p>
 
         <!--here, on the yield statement is where most of the aplication info will display-->
