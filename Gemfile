@@ -32,7 +32,7 @@ gem 'turbolinks'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#i will use it to make the restfull api someday
+#i will use it to make the restfull api someday, somehow this was the gem than was giving the errors
 #  gem 'rails-api'
 
 #help with the api documentation
