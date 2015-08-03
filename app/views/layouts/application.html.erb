@@ -59,9 +59,9 @@
   </div>
   <div id="page-wrap" data-pjax-container=" ">
 	<div class="over_content">
-
-	  <p><b>So, the leguend is true, the one who kills the ashbringer becomes the one</b></p>
-
+  <% if user_signed_in? %>
+     <p>Esto no lo vez a menos que estes logueado</p>
+  <% end %>
         <!--here, on the yield statement is where most of the aplication info will display-->
         
         <%= yield %>
