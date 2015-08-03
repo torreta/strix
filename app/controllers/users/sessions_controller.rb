@@ -9,7 +9,7 @@ class Users::SessionsController < Devise::SessionsController
   #POST /resource/sign_in
   def create
      super
-      flash[:notice] = "You have successfully logged in."
+      flash[:notice] = "You have successfully logged in. o thats what they told me to say...."
     
   end
 

@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   
   protect_from_forgery with: :null_session, if: Proc.new { |c| c.request.format == 'application/json' }
   
-  def after_sign_in_path_for(resource)
-    flash[:notice] = "You have successfully logged in."
-    root_path
-  end
+  # def after_sign_in_path_for(resource)
+  #   flash[:notice] = "You have successfully logged in. bro"
+  #   root_path
+  # end
 end
