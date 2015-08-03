@@ -1,9 +1,13 @@
 <h1> Esta es la pagina de bienvenida de strix, someday....</h1>
 
  <a href="#">
-    <%= image_tag "Under_creation.jpg" %> 
-    <%= image_tag "sleep_under.jpg" %>
-    <%= image_tag "animer_under.jpg" %>
+  
+  <%= image_tag "Under_creation.jpg" %> 
+  <%= image_tag "sleep_under.jpg" %>
+  <% if user_signed_in? %>
+   <%= image_tag "animer_under.jpg" %>
+  <% end %>
+    
  </a>
  
  <p> Son varias imagenes para probar el scroll</p>
