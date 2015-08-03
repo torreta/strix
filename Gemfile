@@ -58,5 +58,9 @@ gem 'bcrypt', '~> 3.1.7'
 #to add user logins and accounts
 gem 'devise'
 
+#gem to hide config variables of mailer
+gem 'dotenv-rails', :groups => [:development, :test]
+
+
 end
 
