@@ -10,7 +10,7 @@ class Users::SessionsController < Devise::SessionsController
   def create
      super
       flash[:notice] = "You have successfully logged in. o thats what they told me to say...."
-      UserMailer.send_signup_email(current_user).deliver_now
+      #UserMailer.send_signup_email(current_user).deliver_now
     
   end
 
