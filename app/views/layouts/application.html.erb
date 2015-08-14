@@ -57,17 +57,17 @@
       <% end %>
     </div>
   </div>
-  <div id="page-wrap" data-pjax-container=" ">
-	<div class="over_content">
+  <div id="page-wrap" class="container text-center">
+	  <div class="over_content">
 	  
-  <% if user_signed_in? %>
-     <p>Esto no lo vez a menos que estes logueado</p>
-  <% end %>
-        <!--here, on the yield statement is where most of the aplication info will display-->
-        
-        <%= yield %>
-
-      
+        <% if user_signed_in? %>
+           <p>Esto no lo vez a menos que estes logueado</p>
+        <% end %>
+              <!--here, on the yield statement is where most of the aplication info will display-->
+              
+              <%= yield %>
+    
+          
     </div>
   </div>
    
